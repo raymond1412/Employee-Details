@@ -1,0 +1,10 @@
+<% emp = Employee.where(reporting_manager: name.strip)%>
+<% puts "Hello"; puts "Hello"; puts name; puts emp.count%>
+<ul>
+  <% emp.each do |e| %>
+    <li>
+      <h5><%= link_to e.name, e %> <%= e.designation %></h5>
+      <%= render partial:"employees/listview", locals:{name: e.name} %>
+    </li>
+  <% end %>
+</ul>

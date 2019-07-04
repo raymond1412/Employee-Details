@@ -1,0 +1,12 @@
+<br>
+<h2> EMPLOYEE HIERARCHY </h2>
+<hr>
+<% emp = Employee.where(reporting_manager: "")%>
+<ul>
+  <% emp.each do |e| %>
+    <li>
+      <h5><%= link_to e.name, e %> <%= e.designation %></h5>
+      <%= render partial:"employees/listview", locals:{name: e.name} %>
+    </li>
+  <% end %>
+</ul>

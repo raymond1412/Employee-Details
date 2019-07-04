@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @employee.designation %>
+</p>
+
+<p>
+  <strong>Reporting manager:</strong>
+  <%= @employee.reporting_manager %>
+</p>
+
+<%= link_to 'Edit', edit_employee_path(@employee), class: "btn btn-primary" %>
+<%= link_to 'Back', employees_path, class: "btn btn-danger" %>
